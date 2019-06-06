@@ -1,0 +1,328 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C93C5F2E22403FA200FD53DC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93C5F2D22403FA200FD53DC /* main.swift */; };
+		C93C5F372240405C00FD53DC /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93C5F362240405C00FD53DC /* Card.swift */; };
+		C93C5F392240409000FD53DC /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93C5F382240409000FD53DC /* PlayingCard.swift */; };
+		C93C5F3B224040CA00FD53DC /* CardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93C5F3A224040CA00FD53DC /* CardDeck.swift */; };
+		C93C5F3D224040EF00FD53DC /* PlayingCardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93C5F3C224040EF00FD53DC /* PlayingCardDeck.swift */; };
+		C93C5F3F2240412200FD53DC /* BlackjackGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93C5F3E2240412200FD53DC /* BlackjackGame.swift */; };
+		C98AB2BE2242C38E0047C4F6 /* BlackjackGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98AB2BD2242C38E0047C4F6 /* BlackjackGameController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C93C5F2822403FA200FD53DC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C93C5F2A22403FA200FD53DC /* Blackjack CLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Blackjack CLI"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C93C5F2D22403FA200FD53DC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C93C5F362240405C00FD53DC /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		C93C5F382240409000FD53DC /* PlayingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCard.swift; sourceTree = "<group>"; };
+		C93C5F3A224040CA00FD53DC /* CardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeck.swift; sourceTree = "<group>"; };
+		C93C5F3C224040EF00FD53DC /* PlayingCardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardDeck.swift; sourceTree = "<group>"; };
+		C93C5F3E2240412200FD53DC /* BlackjackGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackGame.swift; sourceTree = "<group>"; };
+		C98AB2BD2242C38E0047C4F6 /* BlackjackGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackGameController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C93C5F2722403FA200FD53DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C93C5F2122403FA200FD53DC = {
+			isa = PBXGroup;
+			children = (
+				C93C5F2C22403FA200FD53DC /* Blackjack CLI */,
+				C93C5F2B22403FA200FD53DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C93C5F2B22403FA200FD53DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C93C5F2A22403FA200FD53DC /* Blackjack CLI */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C93C5F2C22403FA200FD53DC /* Blackjack CLI */ = {
+			isa = PBXGroup;
+			children = (
+				C98AB2BC2242C3670047C4F6 /* Controller */,
+				C93C5F2D22403FA200FD53DC /* main.swift */,
+				C93C5F342240400100FD53DC /* Model */,
+			);
+			path = "Blackjack CLI";
+			sourceTree = "<group>";
+		};
+		C93C5F342240400100FD53DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C93C5F362240405C00FD53DC /* Card.swift */,
+				C93C5F382240409000FD53DC /* PlayingCard.swift */,
+				C93C5F3A224040CA00FD53DC /* CardDeck.swift */,
+				C93C5F3C224040EF00FD53DC /* PlayingCardDeck.swift */,
+				C93C5F3E2240412200FD53DC /* BlackjackGame.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C98AB2BC2242C3670047C4F6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C98AB2BD2242C38E0047C4F6 /* BlackjackGameController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C93C5F2922403FA200FD53DC /* Blackjack CLI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C93C5F3122403FA200FD53DC /* Build configuration list for PBXNativeTarget "Blackjack CLI" */;
+			buildPhases = (
+				C93C5F2622403FA200FD53DC /* Sources */,
+				C93C5F2722403FA200FD53DC /* Frameworks */,
+				C93C5F2822403FA200FD53DC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Blackjack CLI";
+			productName = "Blackjack CLI";
+			productReference = C93C5F2A22403FA200FD53DC /* Blackjack CLI */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C93C5F2222403FA200FD53DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Matthew Johnson";
+				TargetAttributes = {
+					C93C5F2922403FA200FD53DC = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = C93C5F2522403FA200FD53DC /* Build configuration list for PBXProject "Blackjack CLI" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C93C5F2122403FA200FD53DC;
+			productRefGroup = C93C5F2B22403FA200FD53DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C93C5F2922403FA200FD53DC /* Blackjack CLI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C93C5F2622403FA200FD53DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C93C5F2E22403FA200FD53DC /* main.swift in Sources */,
+				C93C5F392240409000FD53DC /* PlayingCard.swift in Sources */,
+				C93C5F3D224040EF00FD53DC /* PlayingCardDeck.swift in Sources */,
+				C93C5F3B224040CA00FD53DC /* CardDeck.swift in Sources */,
+				C93C5F372240405C00FD53DC /* Card.swift in Sources */,
+				C98AB2BE2242C38E0047C4F6 /* BlackjackGameController.swift in Sources */,
+				C93C5F3F2240412200FD53DC /* BlackjackGame.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C93C5F2F22403FA200FD53DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C93C5F3022403FA200FD53DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		C93C5F3222403FA200FD53DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6X6Z6LM82U;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		C93C5F3322403FA200FD53DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6X6Z6LM82U;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C93C5F2522403FA200FD53DC /* Build configuration list for PBXProject "Blackjack CLI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C93C5F2F22403FA200FD53DC /* Debug */,
+				C93C5F3022403FA200FD53DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C93C5F3122403FA200FD53DC /* Build configuration list for PBXNativeTarget "Blackjack CLI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C93C5F3222403FA200FD53DC /* Debug */,
+				C93C5F3322403FA200FD53DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C93C5F2222403FA200FD53DC /* Project object */;
+}
