@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C92879D422AAD4C8009A1047 /* GamePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92879D322AAD4C8009A1047 /* GamePlayer.swift */; };
+		C92879D622AAD4FB009A1047 /* CardGamePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92879D522AAD4FB009A1047 /* CardGamePlayer.swift */; };
+		C92879D822ABE278009A1047 /* PlayingCardGamePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92879D722ABE278009A1047 /* PlayingCardGamePlayer.swift */; };
 		C93C5F2E22403FA200FD53DC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93C5F2D22403FA200FD53DC /* main.swift */; };
 		C93C5F372240405C00FD53DC /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93C5F362240405C00FD53DC /* Card.swift */; };
 		C93C5F392240409000FD53DC /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93C5F382240409000FD53DC /* PlayingCard.swift */; };
@@ -29,6 +32,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C92879D322AAD4C8009A1047 /* GamePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayer.swift; sourceTree = "<group>"; };
+		C92879D522AAD4FB009A1047 /* CardGamePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGamePlayer.swift; sourceTree = "<group>"; };
+		C92879D722ABE278009A1047 /* PlayingCardGamePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardGamePlayer.swift; sourceTree = "<group>"; };
 		C93C5F2A22403FA200FD53DC /* Blackjack CLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Blackjack CLI"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93C5F2D22403FA200FD53DC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C93C5F362240405C00FD53DC /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -80,6 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				C93C5F362240405C00FD53DC /* Card.swift */,
+				C92879D322AAD4C8009A1047 /* GamePlayer.swift */,
+				C92879D522AAD4FB009A1047 /* CardGamePlayer.swift */,
+				C92879D722ABE278009A1047 /* PlayingCardGamePlayer.swift */,
 				C93C5F382240409000FD53DC /* PlayingCard.swift */,
 				C93C5F3A224040CA00FD53DC /* CardDeck.swift */,
 				C93C5F3C224040EF00FD53DC /* PlayingCardDeck.swift */,
@@ -123,11 +132,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Matthew Johnson";
 				TargetAttributes = {
 					C93C5F2922403FA200FD53DC = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -155,7 +165,10 @@
 			files = (
 				C93C5F2E22403FA200FD53DC /* main.swift in Sources */,
 				C93C5F392240409000FD53DC /* PlayingCard.swift in Sources */,
+				C92879D822ABE278009A1047 /* PlayingCardGamePlayer.swift in Sources */,
+				C92879D422AAD4C8009A1047 /* GamePlayer.swift in Sources */,
 				C93C5F3D224040EF00FD53DC /* PlayingCardDeck.swift in Sources */,
+				C92879D622AAD4FB009A1047 /* CardGamePlayer.swift in Sources */,
 				C93C5F3B224040CA00FD53DC /* CardDeck.swift in Sources */,
 				C93C5F372240405C00FD53DC /* Card.swift in Sources */,
 				C98AB2BE2242C38E0047C4F6 /* BlackjackGameController.swift in Sources */,
@@ -284,20 +297,22 @@
 		C93C5F3222403FA200FD53DC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6X6Z6LM82U;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		C93C5F3322403FA200FD53DC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6X6Z6LM82U;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

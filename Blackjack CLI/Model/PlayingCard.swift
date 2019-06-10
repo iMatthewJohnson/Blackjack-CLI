@@ -8,6 +8,9 @@
 
 import Foundation
 class PlayingCard : Card, CustomDebugStringConvertible {
+    let suit: Suit
+    let rank: Rank
+    
     var debugDescription: String {
         let suitString : String
         let rankString : String
@@ -31,22 +34,9 @@ class PlayingCard : Card, CustomDebugStringConvertible {
         case .ace:
             rankString = "A"
         default:
-            rankString = "\(rankValue)"
+            rankString = "\(getRankValue())"
         }
         return "\(rankString)\(suitString)"
-    }
-    
-    let suit: Suit
-    let rank: Rank
-    var rankValue : Int {
-        switch rank {
-        case .jack, .queen, .king:
-            return 10
-        case .ace:
-            return 11
-        default:
-            return rank.rawValue + 2
-        }
     }
     
     init(suit: Suit, rank: Rank) {
@@ -54,6 +44,16 @@ class PlayingCard : Card, CustomDebugStringConvertible {
         self.rank = rank
     }
     
+    public func getRankValue(where aceHasValueOfOne:Bool = false) -> Int {
+        switch rank {
+        case .jack, .queen, .king:
+            return 10
+        case .ace:
+            return aceHasValueOfOne ? 1 : 11
+        default:
+            return rank.rawValue + 2
+        }
+    }
     enum Suit : String, CaseIterable {
         case spades,clubs,hearts,diamonds
     }

@@ -50,7 +50,7 @@ class BlackJackGame{
     private func getTotalValueOfCards(cards : [PlayingCard]) -> Int {
         var total = 0
         for card in cards {
-            total += card.rankValue
+            total += card.getRankValue()
         }
         //Covert Aces into a value of 1 if value of 11 causes over 21
         for _ in 0 ..< cards.filter({$0.rank == .ace}).count {
