@@ -34,7 +34,7 @@ class BlackJackGame{
     }
 
     
-    func dealNextCard(to player: BlackjackGamePlayer, withCardFlipped cardOrientation: CardFaceOrientation) {
+    func dealNextCard(to player: BlackjackGamePlayer, withCardFlipped cardOrientation: CardFaceOrientation?) {
         let nextCard = deck.drawNextCard(withCardFacing: cardOrientation)
         player.playerCards += [nextCard]
     }

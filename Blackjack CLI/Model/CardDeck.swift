@@ -18,8 +18,8 @@ class CardDeck {
         cards += [card]
     }
     
-    func drawNextCard(withCardFacing cardOrientation: CardFaceOrientation) -> Card {
-        var card = cards.remove(at: 0)
+    func drawNextCard(withCardFacing cardOrientation: CardFaceOrientation?) -> Card {
+        let card = cards.remove(at: 0)
         card.setFace(cardOrientation);
         return card
     }

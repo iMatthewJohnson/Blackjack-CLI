@@ -19,7 +19,7 @@ class PlayingCardDeck : CardDeck {
         }
     }
     
-    override func drawNextCard(withCardFacing cardOrientation: CardFaceOrientation) -> PlayingCard {
+    override func drawNextCard(withCardFacing cardOrientation: CardFaceOrientation?) -> PlayingCard {
         return super.drawNextCard(withCardFacing: cardOrientation) as! PlayingCard
     }
 }

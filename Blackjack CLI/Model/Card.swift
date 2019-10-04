@@ -16,7 +16,7 @@ class Card {
         }
     }
 
-    public func setFace(_ cardOrientation: CardFaceOrientation) {
+    public func setFace(_ cardOrientation: CardFaceOrientation?) {
         isFaceUp = cardOrientation == .up
     }
 }
