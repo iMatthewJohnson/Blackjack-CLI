@@ -14,22 +14,22 @@ class BlackjackGameController {
     public func startGame() {
         print("Welcome to Blackjack. Press ENTER when you're reading to begin")
         _ = readLine()
-        print("You were dealt a \(game.playerCards[0]) and \(game.playerCards[1])")
+        print("You were dealt a \(game.player.playerCards[0]) and \(game.player.playerCards[1])")
         print("Your total is \(game.playerTotal)\n")
-        print("The dealer is showing a \(game.dealerCards[0]) and a hidden card")
+        print("The dealer is showing a \(game.dealer.playerCards[0]) and a hidden card")
         print("The dealer's total is also hidden\n")
         while playerWillHit() {
-            game.dealNextCardToPlayer()
-            print("You drew a \(game.playerCards.last!)")
+            game.dealNextCard(to: game.player, withCardFlipped: .up)
+            print("You drew a \(game.player.playerCards.last!)")
             print("Your total is \(game.playerTotal)")
             if game.playerHasBusted {break}
         }
         print("\nNow it's the dealer's turn.\n")
-        print("Delaer flips over his hidden card and it's a \(game.dealerCards[1])")
+        print("Delaer flips over his hidden card and it's a \(game.dealer.playerCards[1])")
         print("The dealer's total is \(game.dealerTotal)\n")
         while dealerWillHit() {
-            game.dealNextCardToDealer()
-            print("The dealer drew a \(game.dealerCards.last!)")
+            game.dealNextCard(to: game.dealer, withCardFlipped: .up)
+            print("The dealer drew a \(game.dealer.playerCards.last!)")
             print("The dealer's total is \(game.dealerTotal)")
             
             

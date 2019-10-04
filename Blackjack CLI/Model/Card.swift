@@ -8,5 +8,19 @@
 
 import Foundation
 class Card {
-    
+    private(set) var isFaceUp: Bool?
+
+    public func flipCard() {
+        if let isFaceUp = self.isFaceUp {
+            self.isFaceUp = !isFaceUp
+        }
+    }
+
+    public func setFace(_ cardOrientation: CardFaceOrientation) {
+        isFaceUp = cardOrientation == .up
+    }
+}
+
+enum CardFaceOrientation {
+    case up, down
 }

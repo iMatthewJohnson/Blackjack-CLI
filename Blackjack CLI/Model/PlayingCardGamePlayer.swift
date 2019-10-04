@@ -40,7 +40,7 @@ class PlayingCardGamePlayer: CardGamePlayer
         }
     }
     
-    public func totalFaceValueOfCard(where aceHasValueOfOne:Bool = false) -> Int {
+    public func getValueOfCards(whereAceHasValueOfOne aceHasValueOfOne:Bool = false) -> Int {
         var sum = 0
         for card in (playerCards as! [PlayingCard]) {
             sum += card.getRankValue(where: aceHasValueOfOne)

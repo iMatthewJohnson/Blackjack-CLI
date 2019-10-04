@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33071B39BBF33552605B8ECA /* BlackjackGamePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3307187382B771C167D1C314 /* BlackjackGamePlayer.swift */; };
 		C92879D422AAD4C8009A1047 /* GamePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92879D322AAD4C8009A1047 /* GamePlayer.swift */; };
 		C92879D622AAD4FB009A1047 /* CardGamePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92879D522AAD4FB009A1047 /* CardGamePlayer.swift */; };
 		C92879D822ABE278009A1047 /* PlayingCardGamePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92879D722ABE278009A1047 /* PlayingCardGamePlayer.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3307187382B771C167D1C314 /* BlackjackGamePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackjackGamePlayer.swift; sourceTree = "<group>"; };
 		C92879D322AAD4C8009A1047 /* GamePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayer.swift; sourceTree = "<group>"; };
 		C92879D522AAD4FB009A1047 /* CardGamePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGamePlayer.swift; sourceTree = "<group>"; };
 		C92879D722ABE278009A1047 /* PlayingCardGamePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardGamePlayer.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				C93C5F3A224040CA00FD53DC /* CardDeck.swift */,
 				C93C5F3C224040EF00FD53DC /* PlayingCardDeck.swift */,
 				C93C5F3E2240412200FD53DC /* BlackjackGame.swift */,
+				3307187382B771C167D1C314 /* BlackjackGamePlayer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				C93C5F372240405C00FD53DC /* Card.swift in Sources */,
 				C98AB2BE2242C38E0047C4F6 /* BlackjackGameController.swift in Sources */,
 				C93C5F3F2240412200FD53DC /* BlackjackGame.swift in Sources */,
+				33071B39BBF33552605B8ECA /* BlackjackGamePlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

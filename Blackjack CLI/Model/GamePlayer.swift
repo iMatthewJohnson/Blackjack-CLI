@@ -8,9 +8,5 @@
 
 import Foundation
 class GamePlayer {
-    var score : Int
-    
-    public init() {
-        score = 0
-    }
+    var score : Int = 0
 }

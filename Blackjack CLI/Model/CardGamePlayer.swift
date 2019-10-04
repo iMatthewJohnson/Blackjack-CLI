@@ -15,7 +15,7 @@ class CardGamePlayer : GamePlayer {
      at the "bottom" (position 0)
      - Returns: The card removed, or nil if player had no cards.
      */
-    public func addCards(cards:[Card]) {
+    public func addCards(_ cards:[Card]) {
         playerCards += cards
     }
     

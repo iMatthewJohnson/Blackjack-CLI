@@ -10,8 +10,8 @@ import Foundation
 
 class BlackJackGame{
     private var deck = PlayingCardDeck()
-    private(set) var playerCards = [PlayingCard]()
-    private(set) var dealerCards = [PlayingCard]()
+    private(set) var player = BlackjackGamePlayer()
+    private(set) var dealer = BlackjackGamePlayer()
     var playerHasBusted : Bool {
         return playerTotal > 21
     }
@@ -19,35 +19,26 @@ class BlackJackGame{
         return dealerTotal > 21
     }
     var playerTotal : Int {
-        let total = getTotalValueOfCards(cards: playerCards)
-        return total
+        return player.getValueOfCards()
     }
     var dealerTotal : Int {
-        let total = getTotalValueOfCards(cards: dealerCards)
-        return total
+        dealer.getValueOfCards()
     }
     
     init() {
         deck.shuffleCards()
-        playerCards += [deck.drawNextCard()]
-        dealerCards += [deck.drawNextCard()]
-        playerCards += [deck.drawNextCard()]
-        dealerCards += [deck.drawNextCard()]
+        player.addCards([deck.drawNextCard(withCardFacing: .up)])
+        dealer.addCards([deck.drawNextCard(withCardFacing: .up)])
+        player.addCards([deck.drawNextCard(withCardFacing: .up)])
+        dealer.addCards([deck.drawNextCard(withCardFacing: .down)])
     }
+
     
-    func dealNextCardToPlayer() {
-        dealNextCard(to: &playerCards)
+    func dealNextCard(to player: BlackjackGamePlayer, withCardFlipped cardOrientation: CardFaceOrientation) {
+        let nextCard = deck.drawNextCard(withCardFacing: cardOrientation)
+        player.playerCards += [nextCard]
     }
-    
-    func dealNextCardToDealer(){
-        dealNextCard(to: &dealerCards)
-    }
-    
-    private func dealNextCard(to cardDeck: inout [PlayingCard]) {
-        let nextCard = deck.drawNextCard()
-        cardDeck += [nextCard]
-    }
-    private func getTotalValueOfCards(cards : [PlayingCard]) -> Int {
+    private func getTotalValueOfCards(_ cards : [PlayingCard]) -> Int {
         var total = 0
         for card in cards {
             total += card.getRankValue()
