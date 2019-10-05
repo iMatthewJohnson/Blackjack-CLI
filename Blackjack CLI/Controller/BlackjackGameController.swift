@@ -28,7 +28,7 @@ class BlackjackGameController {
 
         print("\nNow it's the dealer's turn.\n")
         game.dealer.playerCards[1].flipCard()
-        print("Delaer flips over his hidden card and it's a \(game.dealer.playerCards[1])")
+        print("Dealer lips over his hidden card and it's a \(game.dealer.playerCards[1])")
         print("The dealer's total is \(game.dealerTotal)\n")
         while dealerWillHit() {
             game.dealNextCard(to: game.dealer, withCardFlipped: .up)
@@ -53,8 +53,3 @@ class BlackjackGameController {
     }
 }
 
-extension String {
-    func equalsToIgnoreCase(string : String) -> Bool {
-        return self.caseInsensitiveCompare(string) == .orderedSame
-    }
-}

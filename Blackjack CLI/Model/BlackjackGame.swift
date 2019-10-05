@@ -11,15 +11,15 @@ import Foundation
 class BlackJackGame{
     private var deck = PlayingCardDeck()
     private(set) var player = BlackjackGamePlayer()
-    private(set) var dealer = BlackjackGamePlayer()
+    private(set) var dealer = BlackjackGamePlayer(isDealer: true)
     var playerHasBusted : Bool {
-        return playerTotal > 21
+        playerTotal > 21
     }
     var dealerHasBusted : Bool {
-        return dealerTotal > 21
+        dealerTotal > 21
     }
     var playerTotal : Int {
-        return player.getValueOfCards()
+        player.getValueOfCards()
     }
     var dealerTotal : Int {
         dealer.getValueOfCards()

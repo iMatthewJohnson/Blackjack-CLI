@@ -44,12 +44,12 @@ class PlayingCard : Card, CustomDebugStringConvertible {
         self.rank = rank
     }
     
-    public func getRankValue(where aceHasValueOfOne:Bool = false) -> Int {
+    public func getRankValue(whereAcesHasAValueOf aceValue:AceValue = .eleven) -> Int {
         switch rank {
         case .jack, .queen, .king:
             return 10
         case .ace:
-            return aceHasValueOfOne ? 1 : 11
+            return aceValue.rawValue
         default:
             return rank.rawValue + 2
         }
@@ -60,5 +60,9 @@ class PlayingCard : Card, CustomDebugStringConvertible {
     
     enum Rank: Int, CaseIterable {
         case two,three,four,five,six,seven,eight,nine,ten,jack,queen,king,ace
+    }
+
+    enum AceValue: Int {
+        case one = 1,eleven = 11
     }
 }

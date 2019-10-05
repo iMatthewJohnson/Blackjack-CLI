@@ -6,7 +6,29 @@
 import Foundation
 
 class BlackjackGamePlayer: PlayingCardGamePlayer {
-    var playerHandAction: BlackjackGamePlayerHandAction?
+    var playerHandAction: BlackjackGamePlayerHandAction? {
+        get {
+            if self.isDealer {
+                return self.playerTotal <= 16 ? .hit : .stand
+            } else {
+                return self.playerHandAction
+            }
+        }
+        set {
+            self.playerHandAction = newValue
+        }
+    }
+    let isDealer: Bool
+    var hasBusted : Bool {
+        playerTotal > 21
+    }
+    var playerTotal : Int {
+        self.getValueOfCards()
+    }
+
+    init(isDealer:Bool = false) {
+        self.isDealer = isDealer
+    }
 
     public func getValueOfCards() -> Int {
         var total = super.getValueOfCards(onlyCountingCardsFaceUp: true)

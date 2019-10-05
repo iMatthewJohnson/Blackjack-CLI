@@ -46,23 +46,15 @@ class CardGamePlayer : GamePlayer {
     public func discardRandomCard() -> Card? {
         return discardCardAt(position: Int.random(in: 0..<playerCards.count))
     }
-    
+
+
+
     public func getAllCards() -> [Card] {
         return playerCards
     }
     
     public func shuffleCards() {
         playerCards.shuffle()
-    }
-    
-    public func discardAllCards() -> [Card]? {
-        if playerCards.count > 0 {
-            let copyOfPlayerCards = playerCards
-            playerCards.removeAll()
-            return copyOfPlayerCards
-        } else {
-            return nil
-        }
     }
 }
 
