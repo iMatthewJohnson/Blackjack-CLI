@@ -14,8 +14,8 @@ class CardDeck {
         cards.shuffle()
     }
     
-    func addCard(card : Card) {
-        cards += [card]
+    func addCards(_ cards : [Card]) {
+        self.cards += cards
     }
     
     func drawNextCard(withCardFacing cardOrientation: CardFaceOrientation?) -> Card {

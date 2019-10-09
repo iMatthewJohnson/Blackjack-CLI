@@ -15,17 +15,17 @@ class PlayingCardGamePlayer: CardGamePlayer
         playerCards = [PlayingCard]()
     }
 
-    public func numberOPlayingCardsWith(suit:PlayingCard.Suit) -> Int {
-        return (playerCards as! [PlayingCard]).filter({$0.suit == suit}).count
-    }
-    
-    public func numberOfPlayingCardsWith(rank:PlayingCard.Rank) -> Int {
-         return (playerCards as! [PlayingCard]).filter({$0.rank == rank}).count
-    }
-    
-    public func numberOfPlayingCardsWith(rank:PlayingCard.Rank, andSuit suit:PlayingCard.Suit) -> Int {
-        return (playerCards as! [PlayingCard]).filter({$0.rank == rank && $0.suit == suit}).count
-    }
+public func numberOPlayingCardsWith(suit:PlayingCard.Suit) -> Int {
+    return (playerCards as! [PlayingCard]).filter({$0.suit == suit}).count
+}
+
+public func numberOfPlayingCardsWith(rank:PlayingCard.Rank) -> Int {
+    return (playerCards as! [PlayingCard]).filter({$0.rank == rank}).count
+}
+
+public func numberOfPlayingCardsWith(rank:PlayingCard.Rank, andSuit suit:PlayingCard.Suit) -> Int {
+    return (playerCards as! [PlayingCard]).filter({$0.rank == rank && $0.suit == suit}).count
+}
     
     public func orderCardsByRank(whereAceHasValueOf aceValue: PlayingCard.AceValue = .eleven) {
         playerCards.sort(by: {($0 as! PlayingCard).rank.rawValue < ($1 as! PlayingCard).rank.rawValue})

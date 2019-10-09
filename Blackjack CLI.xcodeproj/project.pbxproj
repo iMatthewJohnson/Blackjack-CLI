@@ -98,6 +98,13 @@
 			path = "GamePlayer Classes";
 			sourceTree = "<group>";
 		};
+		33071BFD907A1A3BEC684C58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C93C5F2122403FA200FD53DC = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +127,7 @@
 				C98AB2BC2242C3670047C4F6 /* Controller */,
 				C93C5F2D22403FA200FD53DC /* main.swift */,
 				C93C5F342240400100FD53DC /* Model */,
+				33071BFD907A1A3BEC684C58 /* View */,
 			);
 			path = "Blackjack CLI";
 			sourceTree = "<group>";

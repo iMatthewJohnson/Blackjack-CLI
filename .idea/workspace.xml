@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4cd0b9c0-da1d-4e00-9925-c877371debcf" name="Default Changelist" comment="* organized files into folders.&#10;* added AcesValues enum to PlayingCard and changed aceHasValueOfOne in method calls to acHasValueOf acesValue&#10;* Added boolean property to BlackjackGamePlayer class to keep track if player is a dealer or not&#10;* Started to write BlackjackGameHand class.">
-      <change afterPath="$PROJECT_DIR$/Blackjack CLI/Model/GamePlayer Classes/BlackjackGame Classes/BlackjackGameHand.swift" afterDir="false" />
+    <list default="true" id="4cd0b9c0-da1d-4e00-9925-c877371debcf" name="Default Changelist" comment="* Changed BlackjackGame and BlackjackGame controller to structs instead of classes, since they did not inherit from any classes (nor is that planned)&#10;* Added the ability for PlayingCard">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blackjack CLI.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack CLI.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blackjack CLI/Controller/BlackjackGameController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack CLI/Controller/BlackjackGameController.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blackjack CLI/Model/BlackjackGame.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack CLI/Model/BlackjackGame.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blackjack CLI/Model/BlackjackGamePlayer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack CLI/Model/GamePlayer Classes/BlackjackGame Classes/BlackjackGamePlayer.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blackjack CLI/Model/Card.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack CLI/Model/Card Classes/Card.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blackjack CLI/Model/CardDeck.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack CLI/Model/CardDeck Classes/CardDeck.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blackjack CLI/Model/CardGamePlayer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack CLI/Model/GamePlayer Classes/CardGamePlayer.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blackjack CLI/Model/GamePlayer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack CLI/Model/GamePlayer Classes/GamePlayer.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blackjack CLI/Model/PlayingCard.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack CLI/Model/Card Classes/PlayingCard.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blackjack CLI/Model/PlayingCardDeck.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack CLI/Model/CardDeck Classes/PlayingCardDeck.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blackjack CLI/Model/PlayingCardGamePlayer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack CLI/Model/GamePlayer Classes/PlayingCardGamePlayer.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blackjack CLI/Model/CardDeck Classes/CardDeck.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack CLI/Model/CardDeck Classes/CardDeck.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blackjack CLI/Model/CardDeck Classes/PlayingCardDeck.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack CLI/Model/CardDeck Classes/PlayingCardDeck.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blackjack CLI/Model/GamePlayer Classes/BlackjackGame Classes/BlackjackGameHand.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack CLI/Model/GamePlayer Classes/BlackjackGame Classes/BlackjackGameHand.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blackjack CLI/Model/GamePlayer Classes/BlackjackGame Classes/BlackjackGamePlayer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack CLI/Model/GamePlayer Classes/BlackjackGame Classes/BlackjackGamePlayer.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blackjack CLI/Model/GamePlayer Classes/PlayingCardGamePlayer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack CLI/Model/GamePlayer Classes/PlayingCardGamePlayer.swift" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +98,10 @@
       <workItem from="1569593418948" duration="115000" />
       <workItem from="1569974966582" duration="6092000" />
       <workItem from="1570151000643" duration="6572000" />
-      <workItem from="1570205407821" duration="16353000" />
+      <workItem from="1570205407821" duration="16376000" />
+      <workItem from="1570293809131" duration="390000" />
+      <workItem from="1570314591825" duration="4065000" />
+      <workItem from="1570374752925" duration="266000" />
     </task>
     <task id="LOCAL-00001" summary="* Added BlackjackGamePlayer class that extends PlayingCardGamePlayer.&#10;* Changed card's &quot;isFlipped&quot; property to an Int? - some card games may not have a concept of flipped up or flipped down cards&#10;* Moved flip card to Card class.&#10;* Added a method to set card orientation (up or down), and paired it with an enum to set value up or down&#10;* Modified drawNextCard() method in CardDeck to set card's orientation when being drawn.&#10;* Updated Blackjack to use BlackjackGamePlayer classes for player and dealer and to be compatible with BlackjacGamePlayer&#10;* Updated BlackjackGameController to be compatible with changes in BlackjackGame class.">
       <created>1570197888274</created>
@@ -125,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570220282842</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="* organized files into folders.&#10;* added AcesValues enum to PlayingCard and changed aceHasValueOfOne in method calls to acHasValueOf acesValue&#10;* Added boolean property to BlackjackGamePlayer class to keep track if player is a dealer or not&#10;* Started to write BlackjackGameHand class.">
+      <created>1570293771957</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1570293771957</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

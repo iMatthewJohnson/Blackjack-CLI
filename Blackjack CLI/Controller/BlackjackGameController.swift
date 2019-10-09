@@ -8,7 +8,7 @@
 
 import Foundation
 
-class BlackjackGameController {
+struct BlackjackGameController {
     let game = BlackJackGame()
     
     public func startGame() {
@@ -18,22 +18,22 @@ class BlackjackGameController {
         print("You were dealt a \(game.player.playerCards[0]) and \(game.player.playerCards[1])")
         print("Your total is \(game.player.getValueOfCards())\n")
         print("The dealer is showing a \(game.dealer.playerCards[0]) and a hidden card")
-        print("The dealer's total is also hidden \(game.dealer.getValueOfCards())\n")
+        print("The dealer's total is also hidden")
         while playerWillHit() {
             game.dealNextCard(to: game.player, withCardFlipped: .up)
             print("You drew a \(game.player.playerCards.last!)")
-            print("Your total is \(game.playerTotal)")
-            if game.playerHasBusted {break}
+            print("Your total is \(game.player.playerTotal)")
+            if game.player.hasBusted {break}
         }
 
         print("\nNow it's the dealer's turn.\n")
         game.dealer.playerCards[1].flipCard()
         print("Dealer lips over his hidden card and it's a \(game.dealer.playerCards[1])")
-        print("The dealer's total is \(game.dealerTotal)\n")
+        print("The dealer's total is \(game.dealer.playerTotal)\n")
         while dealerWillHit() {
             game.dealNextCard(to: game.dealer, withCardFlipped: .up)
             print("The dealer drew a \(game.dealer.playerCards.last!)")
-            print("The dealer's total is \(game.dealerTotal)")
+            print("The dealer's total is \(game.dealer.playerTotal)")
         }
     }
     

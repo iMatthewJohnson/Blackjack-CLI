@@ -5,7 +5,7 @@
 
 import Foundation
 
-class BlackjackGameHand {
+struct BlackjackGameHand {
     private(set) var betAmount: Int
     private var cards: [PlayingCard] = [PlayingCard]()
 

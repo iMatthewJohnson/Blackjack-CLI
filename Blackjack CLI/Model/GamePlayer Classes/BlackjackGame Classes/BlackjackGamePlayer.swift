@@ -6,18 +6,7 @@
 import Foundation
 
 class BlackjackGamePlayer: PlayingCardGamePlayer {
-    var playerHandAction: BlackjackGamePlayerHandAction? {
-        get {
-            if self.isDealer {
-                return self.playerTotal <= 16 ? .hit : .stand
-            } else {
-                return self.playerHandAction
-            }
-        }
-        set {
-            self.playerHandAction = newValue
-        }
-    }
+    var playerHandAction: BlackjackGamePlayerHandAction?
     let isDealer: Bool
     var hasBusted : Bool {
         playerTotal > 21
@@ -29,7 +18,7 @@ class BlackjackGamePlayer: PlayingCardGamePlayer {
     init(isDealer:Bool = false) {
         self.isDealer = isDealer
     }
-
+//TODO: Merge or eliminate player total and/pr getValue of cards. Having these both in there is redundant.
     public func getValueOfCards() -> Int {
         var total = super.getValueOfCards(onlyCountingCardsFaceUp: true)
         // Covert Aces into a value of 1 if value of 11 causes over 21

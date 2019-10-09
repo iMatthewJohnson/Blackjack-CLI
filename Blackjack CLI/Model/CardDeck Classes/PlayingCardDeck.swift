@@ -9,17 +9,25 @@
 import Foundation
 
 class PlayingCardDeck : CardDeck {
+
     override init() {
         super.init()
-        for suit in PlayingCard.Suit.allCases {
-            for rank in PlayingCard.Rank.allCases {
-                let card = PlayingCard(suit: suit, rank: rank)
-                addCard(card: card)
-            }
+        //TODO: Add shuffle option (boolean-> default false) after creation
+        addCards(createDeck())
+    }
+
+private func createDeck()->[PlayingCard] {
+    var deck = [PlayingCard]()
+    for suit in PlayingCard.Suit.allCases {
+        for rank in PlayingCard.Rank.allCases {
+            let card = PlayingCard(suit: suit, rank: rank)
+            deck += [card]
         }
     }
+    return deck
+}
     
-    override func drawNextCard(withCardFacing cardOrientation: CardFaceOrientation?) -> PlayingCard {
-        return super.drawNextCard(withCardFacing: cardOrientation) as! PlayingCard
-    }
+override func drawNextCard(withCardFacing cardOrientation: CardFaceOrientation?) -> PlayingCard {
+    return super.drawNextCard(withCardFacing: cardOrientation) as! PlayingCard
+}
 }
